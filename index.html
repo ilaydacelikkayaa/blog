@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Site</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+ 
+   <style>
+        /* Modal stil ayarları */
+        .modal {
+            display: none; /* Başlangıçta gizli */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color:#6b7280;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .modal button {
+            margin: 10px;
+        }
+        .modal-content h2{
+          color: aliceblue;
+        }
+        @media (max-width: 768px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+    </style>
+  </style>
+</head>
+
+<body>
+  <div class="modal" id="musicModal">
+    <div class="modal-content">
+        <h2>Müzik ister misin?</h2>
+        <button id="yesBtn">Evet, isterim</button>
+        <button id="noBtn">Hayır, istemem</button>
+    </div>
+</div>
+
+<audio id="backgroundMusic" src="sarki.mp3" loop></audio> <!-- Müzik dosyanızın adını belirtin -->
+
+<script>
+    // Sayfa yüklendiğinde modalı göster
+    window.onload = function() {
+        document.getElementById("musicModal").style.display = "flex";
+    };
+
+    // Evet butonuna tıklanınca müziği çal
+    document.getElementById("yesBtn").onclick = function() {
+        document.getElementById("backgroundMusic").play();
+        document.getElementById("musicModal").style.display = "none";
+    };
+
+    // Hayır butonuna tıklanınca müziği durdur
+    document.getElementById("noBtn").onclick = function() {
+        document.getElementById("musicModal").style.display = "none";
+    };
+</script>
+  <header class="header">
+    <div class="logo-container">
+      <div class="logo-image">
+        <img src="ilaydaresim.png" alt="İlayda Çelikkaya" class="header-image">
+      </div>
+      <div class="title">
+        <a href="#" class="logo">İLAYDA ÇELİKKAYA</a>
+    </div>
+</div>
+
+<!-- Navbar'ı başlığın altına alıyoruz -->
+<div class="navb">
+    <nav class="navbar">
+        <a href="https://github.com/ilaydacelikkayaa" target="_blank"><i class='bx bxl-github'></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/ilayda-%C3%A7elikkaya-964141253/" target="_blank"><i class='bx bxl-linkedin-square'></i> LinkedIn</a>
+        <a href="https://medium.com/@ilaydacelikkaya" target="_blank"><i class='bx bxl-medium-square'></i> Medium</a>
+    </nav>
+</div>
+</header>
+
+        <section class="content">
+          <div class="content-info">
+            
+            <h1>
+              Herkese Merhaba!
+            </h1>
+           
+             <p>
+              Ben İlayda Çelikkaya, Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. 
+              Şu anda Veri Bilimi üzerine kapsamlı çalışmalar yapıyorum ve Android uygulama geliştirme alanında Kotlin kullanarak çeşitli
+               projeler üretiyorum.
+              </p>
+              <p>
+                Öğrendiğim bilgileri paylaşmayı seviyorum, bu yüzden zaman zaman Medium'da yazılar yazıyorum. 
+                Bu sayede hem kendimi ifade etme fırsatı buluyorum hem de öğrendiğim konularda derinleşiyorum.
+               Bisiklet sürmek, müzik dinlemek ve kodlama üzerine çalışmak hobilerim arasında. Bu aktiviteler,
+               benim için stres atma ve yaratıcı düşünce yeteneğimi geliştirme yolları.
+              </p>
+              
+            
+            <p>
+              Hedefim, Makine Öğrenmesi alanında kendimi geliştirerek Yapay Zeka konusunda yetkin bir uzman haline gelmek.
+              Bu amaç doğrultusunda sürekli öğrenme ve kendimi geliştirme arayışındayım.
+              Tutkum ve kararlılığımla teknoloji dünyasına katkıda bulunmayı ve bu alanda etkili projeler üretmeyi hedefliyorum.
+            </p>
+              
+               
+          </div>
+          <div class="video-container">
+            <video width="600" controls>
+              <source src="video.mp4" type="video/mp4">
+              Tarayıcınız video etiketi desteklemiyor.
+            </video>
+          </div>
+        </section>
+    
+        <footer>
+            <p>&copy; 2024 Ilayda Celikkaya | 2111012025 </p>
+          </footer>
+</body>
+</html>
